@@ -1,0 +1,23 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "Node.js + Express + MongoDB + JWT + API REST",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SergioRodas/Curso-Nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SergioRodas/Curso-Nodejs/issues"
+  },
+  "homepage": "https://github.com/SergioRodas/Curso-Nodejs#readme",
+  "dependencies": {
+    "cowsay": "^1.5.0"
+  }
+}
