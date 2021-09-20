@@ -9,13 +9,9 @@ app.set("views", __dirname + "/views");
 
 app.use(express.static(__dirname + "/public"));
 
-app.get("/", (req, res) => {
-  res.render("index", { title: "Mi título dinámico" });
-});
-
-app.get("/servicios", (req, res) => {
-  res.render("servicios", { title: "Servicios" });
-});
+// routes:
+app.use("/", require("./router/web_routes"));
+app.use("/mascotas", require("./router/pets"));
 
 app.use((req, res, next) => {
   res

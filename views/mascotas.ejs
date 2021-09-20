@@ -1,0 +1,26 @@
+<%- include('templates/header.ejs', {titleHead: 'Mascotas'}) %>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Descripción</th>
+        <th scope="col">Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if (arrayPets.length > 0) { %> <% arrayPets.forEach(pet => { %>
+      <tr>
+        <th scope="row"><%= pet.id %> </th>
+        <td><%= pet.name %></td>
+        <td><%= pet.description %></td>
+        <td>Botón</td>
+      </tr>
+      <% }) %> <% } %>
+    </tbody>
+  </table>
+</div>
+
+<%- include('templates/footer.ejs') %>
