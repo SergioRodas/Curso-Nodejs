@@ -1,17 +1,11 @@
-const {frutas, dinero} = require('./frutas')
+const http = require('http');
 
-const cowsay = require('cowsay')
-
-
-frutas.forEach(item => {
-    console.count(item)
+const server = http.createServer((req, res) => {
+    res.end('Estoy respondiendo a tu solicitud')
 })
 
-console.log(dinero)
+const port = 3000;
 
-
-console.log(cowsay.say({
-    text : "I'm a moooodule",
-    e : "oO",
-    T : "U "
-}));
+server.listen(port, () => {
+    console.log('escuchando solicitudes')
+})
