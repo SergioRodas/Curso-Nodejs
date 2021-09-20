@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/SergioRodas/Curso-Nodejs#readme",
   "dependencies": {
-    "cowsay": "^1.5.0"
+    "cowsay": "^1.5.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12"
   }
 }
