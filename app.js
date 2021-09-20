@@ -1,23 +1,28 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 
 const port = 3000;
 
-app.use(express.static(__dirname + '/public'));
+// motor de plantillas
+app.set("view engine", "ejs");
+app.set("views", __dirname + "/views");
 
+app.use(express.static(__dirname + "/public"));
 
-app.get('/', (req, res) => {
-    res.send('Mi respuesta desde express')
-})
+app.get("/", (req, res) => {
+  res.render("index", { title: "Mi título dinámico" });
+});
 
-app.get('/servicios', (req, res) => {
-    res.send('Estas en la página de servicios')
-})
+app.get("/servicios", (req, res) => {
+  res.render("servicios", { title: "Servicios" });
+});
 
 app.use((req, res, next) => {
-    res.status(404).sendFile(__dirname + '/public/404.html')
-})
+  res
+    .status(404)
+    .render("404", { title: "Error 404", description: "Página no encontrada" });
+});
 
 app.listen(port, () => {
-    console.log('Servidor escuchando en el puerto', port)
-})
+  console.log("Servidor escuchando en el puerto", port);
+});
