@@ -20,7 +20,9 @@
           <th scope="row"><%= mascota.id %> </th>
           <td><%= mascota.name %></td>
           <td><%= mascota.description %></td>
-          <td>Botón</td>
+          <td>
+            <a href="mascotas/<%= mascota.id %>" class="btn btn-warning btn-sm">Editar</a>
+          </td>
         </tr>
         <% }) %> <% } %>
       </tbody>
