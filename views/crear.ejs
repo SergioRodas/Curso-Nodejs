@@ -1,0 +1,21 @@
+<%- include('templates/header.ejs', {titleHead: 'Crear una mascota'}) %>
+<div class="container">
+  <h1 class="text-center my-4">Crear una mascota</h1>
+  <form action="/mascotas/" method="POST">
+    <input
+      type="text"
+      placeholder="Agregar nombre"
+      class="form-control my-2"
+      name="name"
+    />
+    <input
+      type="text"
+      placeholder="Agregar descripción"
+      class="form-control my-2"
+      name="description"
+    />
+    <button class="btn btn-success w-100" type="submit">Agregar</button>
+  </form>
+</div>
+
+<%- include('templates/footer.ejs') %>
