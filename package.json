@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app",
-    "dev" : "nodemon app"
+    "dev": "nodemon app"
   },
   "repository": {
     "type": "git",
@@ -20,8 +20,10 @@
   "homepage": "https://github.com/SergioRodas/Curso-Nodejs#readme",
   "dependencies": {
     "cowsay": "^1.5.0",
+    "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "mongoose": "^6.0.7",
     "nodemon": "^2.0.12"
   }
 }
