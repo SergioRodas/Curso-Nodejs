@@ -1,0 +1,11 @@
+{{> header title='Equipo'}}
+    <h1>{{title}}</h1>
+
+    <ul>
+        {{#each team}}
+        <li>{{this.name}} {{this.year}}</li>
+        {{/each}}
+    </ul>
+
+
+{{> footer }}
