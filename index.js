@@ -4,6 +4,8 @@ require('dotenv').config()
 
 const app = express();
 
+
+
 // capturar body
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -20,9 +22,13 @@ mongoose.connect(uri,
 
 // import routes
 const authRoutes = require('./routes/auth')
+const admin = require('./routes/admin')
+const verifyToken = require('./routes/validate-token')
 
 // route middlewares
 app.use('/api/user', authRoutes)
+
+app.use('/api/admin', verifyToken, admin)
 
 app.get('/', (req, res) => {
     res.json({
